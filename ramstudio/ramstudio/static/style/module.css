@@ -1,0 +1,52 @@
+nav {
+    background-color: #777;
+    padding-right:3.3%;
+    width:fit-content;
+}
+nav ul li {
+    display: inline;
+}
+nav li .sub-menu {
+    display: inline;
+    background-color:black;
+    position:absolute;
+    left:-9999px;
+    opacity:0;
+    top:82%;
+    transition: opacity .75s;
+    width:100%;
+    z-index:10;
+  }
+  
+  nav li:hover .sub-menu {
+    background-color: black;
+    border-radius: 6px;
+    left:0px;
+    opacity:.6;
+  }
+  
+  nav .sub-menu a {
+    font-size: 1.5vw;
+    line-height:1em;
+    height:inherit;
+    width:97%;
+  }
+  
+  nav .sub-menu a:hover {
+    background-color:black;
+    border-radius: 5px;
+  }
+
+#title {
+    background-color: #999;
+    border-radius: 10px;
+    width: fit-content;
+}
+#title p{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+#welcome-statement {
+    background-color: #888;
+    width: fit-content;
+}
