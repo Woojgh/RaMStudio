@@ -1,5 +1,7 @@
 nav {
     background-color: #777;
+    border-radius: 10px;
+    font-size: 1.6vw;
     padding-right:3.3%;
     width:fit-content;
 }
@@ -40,6 +42,7 @@ nav li .sub-menu {
 #title {
     background-color: #999;
     border-radius: 10px;
+    font-size: 6vw;
     width: fit-content;
 }
 #title p{
