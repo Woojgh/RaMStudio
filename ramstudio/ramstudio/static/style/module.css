@@ -1,6 +1,7 @@
 nav {
     background-color: #777;
     border-radius: 10px;
+    float: right;
     font-size: 1.6vw;
     padding-right:3.3%;
     width:fit-content;
@@ -8,12 +9,16 @@ nav {
 nav ul li {
     display: inline;
 }
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
 nav li .sub-menu {
     display: inline;
     background-color:black;
-    position:absolute;
     left:-9999px;
     opacity:0;
+    position:absolute;
     top:82%;
     transition: opacity .75s;
     width:100%;
@@ -29,8 +34,8 @@ nav li .sub-menu {
   
   nav .sub-menu a {
     font-size: 1.5vw;
-    line-height:1em;
     height:inherit;
+    line-height:1em;
     width:97%;
   }
   
@@ -42,14 +47,25 @@ nav li .sub-menu {
 #title {
     background-color: #999;
     border-radius: 10px;
-    font-size: 6vw;
-    width: fit-content;
+    left: -16%;
+    position: absolute;
+    top: 44%;
+    width: 48%;
+    -webkit-transform: rotate(-90deg);
 }
 #title p{
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+    font-size: 7.5vw;
+    margin: auto;
+    text-align: center;
 }
 #welcome-statement {
     background-color: #888;
-    width: fit-content;
+    border-radius: 10px;
+    bottom: 0;
+    left: 21%;
+    position: fixed;
+}
+#welcome-statement p {
+    margin: 1em;
+    width: 100%;
 }
