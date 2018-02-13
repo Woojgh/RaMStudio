@@ -30,5 +30,21 @@ class Project(models.Model):
     date_uploaded = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        """The string from of the album."""
+        """The string from of the project."""
         return self.title
+
+
+class ProjectForm(ModelForm):
+    """Form for an Project."""
+
+    class Meta:
+        """Meta."""
+
+        model = Project
+        fields = ['title', 'description', 'photos', 'cover']
+
+    # def __init__(self, *args, **kwargs):
+        # """Limit photos to only those by the user."""
+        # super(ProjectForm, self).__init__(*args, **kwargs)
+        # self.fields['photos'].queryset = Photo.objects.all()
+        # self.fields['cover'].queryset = Photo.objects.all()

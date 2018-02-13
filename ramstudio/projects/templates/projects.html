@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block links %}
+<div>
+    <a href="project_create/">+Project</a>
+</div>
+{% endblock %}
+{% block body %}
+<section>
+    <ul>
+        {% for project in object_list %}
+            <li>{{ project.title }}</li>
+        {% endfor %}
+    </ul>
+{% endblock  %}
