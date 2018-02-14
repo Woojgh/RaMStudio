@@ -19,11 +19,11 @@
       <a href="/login"> Login</a>
     {% endif %}
     </div>
-    <nav>
-      <ul>
+    <nav role="navigation">
+      <ul class="access-menu">
         <li><a href="/"> Home</a></li>
         <li><a href="/four04">Grounds</a>
-          <ul class="sub-menu">
+          <ul class="access-submenu">
             <li><a href="#">Greenhouse</a></li>
             <li><a href="#">Pond</a></li>
             <li><a href="#">Zen Garden</a></li>
@@ -35,7 +35,7 @@
           </ul></li>
         <li><a href="/shop">Shop</a></li>
         <li><a href="/projects">Projects</a>
-          <ul class="sub-menu">
+          <ul class="access-submenu">
             <li><a href="/current_projects">Current</a></li>
             <li><a href="/completed_projects">Completed</a></li>
             <li><a href="/seasonal_projects">Seasonal</a></li>
@@ -61,6 +61,8 @@
     <footer>
       {% block foot %}
       {% endblock %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="{% static 'scripts/nav.js' %}"></script>
     </footer>
   </body>
 </html>
