@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% block scripts %}
+<script type="text/javascript">
+    function showImage(imgName) {
+        var curLink = document.getElementById('current-link');
+        var curImage = document.getElementById('project-selected-image');
+        var theSource = imgName;
+        curLink.href = imgName;
+        curImage.src = theSource;
+        curImage.alt = imgName;
+        curImage.title = imgName;
+    }
+</script>
+{% endblock %}
+{% block body %}
+<section id="project-detail-highlighted-image">
+    <a id="current-link" href=""><img id="project-selected-image" src="{{ project.cover.image.url }}" /></a>
+</section>
+<section id="project-detail">
+    <div>
+        {% for photo in project.photos.all %}
+            <item id="project-photo" >
+                {% thumbnail photo.image "75x75" crop="center" as im %}
+                <img src="{{ im.url }}" alt="{{ im.url }}" title="{{ photo.id }}" onclick="showImage('{{ photo.image.url }}');">
+                {% endthumbnail %}
+            </item>
+        {% endfor %}
+    </div>
+    <h1>{{ project.title }}</h1>
+    <ul>
+        {% if project.description %}
+        <li> {{ project.description }}</li>
+        {% endif %}
+    </ul>
+    <p id="project-date">Date uploaded: {{ project.date_uploaded }}</p>
+</section>
+{% endblock %}

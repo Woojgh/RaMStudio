@@ -2,7 +2,7 @@ from django.shortcuts import render
 from projects.models import Project, Photo, ProjectForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-from django.views.generic import ListView,CreateView
+from django.views.generic import ListView,CreateView, DetailView
 from django.views import View
 from django.urls import reverse_lazy
 
@@ -13,17 +13,14 @@ class ProjectsView(ListView):
     context_object_name = 'projects'
     template_name = 'projects.html'
     queryset = Project.objects.all()
-    # model = Project
 
     def get_context_data(self):
         context = super(ProjectsView, self).get_context_data()
-        # context = super().get_context_data(**kwargs)
-        # import pdb;pdb.set_trace()
         return context
 
 
 class ProjectCreateView(LoginRequiredMixin, CreateView):
-    """Create a new album and store in the database."""
+    """Create a new project and store in the database."""
 
     template_name = 'project_create.html'
     login_url = reverse_lazy('home')
@@ -37,6 +34,20 @@ class ProjectCreateView(LoginRequiredMixin, CreateView):
         return kwargs
 
     def form_valid(self, form):
-        """Assign user as creater of album."""
+        """Assign user as creater of project."""
         form.instance.user = self.request.user
         return super(ProjectCreateView, self).form_valid(form)
+
+
+class ProjectDetailView(DetailView):
+    """Render the project detail page."""
+
+    template_name = 'project_detail.html'
+    model = Project
+    pk_url_kwarg = 'id'
+
+    def get_object(self):
+        """Get the project object by primary key and check if is public."""
+        # import pdb;pdb.set_trace()
+        return super(ProjectDetailView, self).get_object()
+    

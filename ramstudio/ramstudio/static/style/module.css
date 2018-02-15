@@ -2,10 +2,11 @@
 
 nav {
     border-radius: 10px;
-    float: right;
     font-size: 1.6vw;
-    padding-right:3.3%;
-    width:fit-content;
+    left: 33%;
+    position: absolute;
+    width: fit-content;
+    z-index: 2;
 }
 nav ul{
 	list-style: none;
@@ -70,14 +71,14 @@ nav ul{
 	top: 100%;
 }
 .project-item {
-    color: white;
-    background-color: #212020e6;
-    display: inline;
-    float: left;
-    height: 30vw;
-    margin: 1%;
-    width: 28%;
+    background-color: #444;
+    color: #999;
     border-radius: 10px;
+    list-style: none;
+    margin: auto;
+    padding: 1%;
+    text-align: center;
+    width: 28%;
 }
 .project-image {
     height:17vw;
@@ -95,6 +96,23 @@ nav ul{
 /* #### IDs #### */
 
 
+#home-about {
+    background-color: #444;
+    color: #999;
+    height: 68%;
+    left: 14.5%;
+    padding: 2%;
+    position: absolute;
+    top: 17%;
+    width: 25%;
+}
+#home-pics {
+    background-color: #444;
+    left: 48%;
+    padding: 1%;
+    position: absolute;
+    top: 16%;
+}
 #home-projects {
     background-color: #444;
     color: #999;
@@ -125,6 +143,43 @@ nav ul{
 }
 #home-project-2  p{
     /* display: inline; */
+}
+#project-date {
+    float: right;
+}
+#project-detail {
+    background-color: #444;
+    border-radius: 10px;
+    color:#999;
+    position: absolute;
+    left: 14%;
+    top: 65%;
+    width: 71%;
+}
+#project-detail-highlighted-image {
+    background-color: #444;
+    border-radius: 10px;
+    left: 21%;
+    position: absolute;
+    top: 11%;
+    padding: .6%;
+    width: 55%;
+    text-align: center;
+}
+#project-detail-highlighted-image img {
+    width: 89%;
+}
+#project-detail div {
+    padding:1%;
+}
+#project-detail h1 {
+    font-size: 40px;
+    padding-left: 32%;
+}
+#project-detail ul {
+    list-style-type: none;
+    text-align: center;
+    width: 65%;
 }
 #title {
     background-color: #444;
