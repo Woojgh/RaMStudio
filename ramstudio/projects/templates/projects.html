@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block links %}
+<div>
+    <a href="project_create/">Add_Project</a>
+</div>
+{% endblock %}
+{% block body %}
+<section>
+    <ul class="project-list">
+            {% for project in object_list %}
+            <li class="project-item"> 
+                <p>
+                    <a herf="{{ project.cover.image.url }}"><img src="{{ project.cover.image.url }}" class="project-image" /></a>
+                </p>
+                <p>{{ project.title }}</p>
+                <p>{{ project.description }}</p>
+            </li>
+        {% empty %}
+            <li>No projects yet.</li>
+        {% endfor %}
+        </ul>
+{% endblock  %}

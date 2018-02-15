@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% csrf_token %}
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style/layout.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style/module.css' %}">
+  </head>
+  <body>
+    <header>
+    <div>
+    {% if user.is_authenticated %}
+      <a href="/logout"> Logout</a>
+      <a href="/admin">Admin</a>
+    {% block links %}
+    {% endblock %}
+    {% else %}
+      <a href="/login"> Login</a>
+    {% endif %}
+    </div>
+    <nav role="navigation">
+      <ul class="access-menu">
+        <li><a href="/"> Home</a></li>
+        <li><a href="/four04">Grounds</a>
+          <ul class="access-submenu">
+            <li><a href="#">Greenhouse</a></li>
+            <li><a href="#">Pond</a></li>
+            <li><a href="#">Zen Garden</a></li>
+            <li><a href="#">Fire Pit</a></li>
+            <li><a href="#">Front Plains</a></li>
+            <li><a href="#">Meditation</a></li>
+            <li><a href="#">Back Deck</a></li>
+            <li><a href="#">Hasta Bend</a></li>
+          </ul></li>
+        <li><a href="/shop">Shop</a></li>
+        <li><a href="/projects">Projects</a>
+          <ul class="access-submenu">
+            <li><a href="#">Current</a></li>
+            <li><a href="#">Completed</a></li>
+          </ul></li>
+        <li><a href="/blog"> Blog</a></li>
+        <li><a href="/about">About</a></li>
+      {% block nav %}
+      {% endblock %}
+      </ul>
+    </nav>
+    <div id="title">
+      <p>Ram &nbsp Studio</p>
+    </div>
+    </header>
+    <main>
+      {% block newsletter %}
+      {% endblock %}
+      {% block body %}
+      {% endblock %}
+      <section id="content" class="tab-content">
+      </section>
+    </main>
+    <footer>
+      {% block foot %}
+      {% endblock %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="{% static 'scripts/nav.js' %}"></script>
+    </footer>
+  </body>
+</html>
