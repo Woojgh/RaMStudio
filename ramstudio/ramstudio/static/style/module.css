@@ -3,9 +3,10 @@
 nav {
     border-radius: 10px;
     font-size: 1.6vw;
-    width: fit-content;
-    position: absolute;
     left: 33%;
+    position: absolute;
+    width: fit-content;
+    z-index: 2;
 }
 nav ul{
 	list-style: none;
@@ -70,14 +71,14 @@ nav ul{
 	top: 100%;
 }
 .project-item {
-    color: white;
-    background-color: #212020e6;
-    display: inline;
-    float: left;
-    height: 30vw;
-    margin: 1%;
-    width: 28%;
+    background-color: #444;
+    color: #999;
     border-radius: 10px;
+    list-style: none;
+    margin: auto;
+    padding: 1%;
+    text-align: center;
+    width: 28%;
 }
 .project-image {
     height:17vw;
@@ -142,6 +143,40 @@ nav ul{
 }
 #home-project-2  p{
     /* display: inline; */
+}
+#project-date {
+    float: right;
+}
+#project-detail {
+    background-color: #444;
+    border-radius: 10px;
+    color:#999;
+    position: absolute;
+    left: 20%;
+    top: 65%;
+    width: 71%;
+}
+#project-detail-highlighted-image {
+    background-color: #444;
+    border-radius: 10px;
+    left: 17%;
+    position: absolute;
+    top: 11%;
+    padding: .6%;
+    width: 55%;
+    text-align: center;
+}
+#project-detail div {
+    padding:1%;
+}
+#project-detail h1 {
+    font-size: 40px;
+    padding-left: 32%;
+}
+#project-detail ul {
+    list-style-type: none;
+    text-align: center;
+    width: 65%;
 }
 #title {
     background-color: #444;

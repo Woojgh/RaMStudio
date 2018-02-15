@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% block body %}
+<section id="project-detail-highlighted-image">
+    <img src="http://via.placeholder.com/850x540" />
+</section>
+<section id="project-detail">
+    <div>
+        {% for photo in project.photos.all %}
+            <a href="{{ photo.image.url }}">
+                {% thumbnail photo.image "75x75" crop="center" as im %}
+                <img src="{{ im.url }}" alt="{{photo.title}}">
+                {% endthumbnail %}
+            </a>
+        {% endfor %}
+    </div>
+    <h1>{{ project.title }}</h1>
+    <ul>
+        {% if project.description %}
+        <li> {{ project.description }}</li>
+        {% endif %}
+    </ul>
+    <p id="project-date">Date uploaded: {{ project.date_uploaded }}</p>
+</section>
+{% endblock %}
