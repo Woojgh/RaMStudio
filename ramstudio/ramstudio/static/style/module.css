@@ -2,10 +2,10 @@
 
 nav {
     border-radius: 10px;
-    float: right;
     font-size: 1.6vw;
-    padding-right:3.3%;
-    width:fit-content;
+    width: fit-content;
+    position: absolute;
+    left: 33%;
 }
 nav ul{
 	list-style: none;
@@ -95,6 +95,23 @@ nav ul{
 /* #### IDs #### */
 
 
+#home-about {
+    background-color: #444;
+    color: #999;
+    height: 68%;
+    left: 14.5%;
+    padding: 2%;
+    position: absolute;
+    top: 17%;
+    width: 25%;
+}
+#home-pics {
+    background-color: #444;
+    left: 48%;
+    padding: 1%;
+    position: absolute;
+    top: 16%;
+}
 #home-projects {
     background-color: #444;
     color: #999;
