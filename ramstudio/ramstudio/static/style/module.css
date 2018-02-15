@@ -96,6 +96,29 @@ nav ul{
 /* #### IDs #### */
 
 
+.about {
+    background-color: #444;
+    border-radius: 7px;
+    position: relative;
+    width: 30%;
+}
+#about-section {
+    position: absolute;
+    top: 11%;
+    width: 85%;
+    height: 87%;
+    left: 14%;
+    border-radius: 10px;
+    font-size: 30px;
+    /* padding: 2vw 1vw 1vw 1vw; */
+    /* margin: 2vw; */
+}
+  
+#aboutpage ul li {
+    text-decoration: none;
+    list-style: none;
+}
+
 #home-about {
     background-color: #444;
     color: #999;
@@ -106,12 +129,18 @@ nav ul{
     top: 17%;
     width: 25%;
 }
+#home-about img {
+    width: 100%;
+}
 #home-pics {
     background-color: #444;
     left: 48%;
     padding: 1%;
     position: absolute;
     top: 16%;
+}
+#home-pics img {
+    width: 100%;
 }
 #home-projects {
     background-color: #444;
@@ -128,7 +157,7 @@ nav ul{
     /* display: inline; */
 }
 #home-current-project img {
-    /* display: block; */
+    width: 100%;
 }
 #home-current-project p {
     /* display: inline; */
@@ -139,10 +168,20 @@ nav ul{
     /* display: inline; */
 }
 #home-project-2 img {
-    /* display: block; */
+    width: 100%
 }
 #home-project-2  p{
     /* display: inline; */
+}
+#project-create-form {
+    position: absolute;
+    text-align: center;
+    color: #999;
+    background-color: #444;
+    border-radius: 10px;
+    top: 15%;
+    left: 23%;
+    padding: 9%;
 }
 #project-date {
     float: right;
