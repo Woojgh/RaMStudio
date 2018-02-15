@@ -9,6 +9,8 @@ __pycache__/
 .DS_Store
 .vs_code
 .vscode
+/media
+media/
 
 # Distribution / packaging
 .Python
