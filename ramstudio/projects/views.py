@@ -48,4 +48,6 @@ class ProjectDetailView(DetailView):
 
     def get_object(self):
         """Get the project object by primary key and check if is public."""
+        # import pdb;pdb.set_trace()
         return super(ProjectDetailView, self).get_object()
+    

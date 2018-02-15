@@ -2,12 +2,12 @@
 {% load thumbnail %}
 {% block body %}
 <section id="project-detail-highlighted-image">
-    <img src="http://via.placeholder.com/850x540" />
+    <img id="project-selected-image" src="{{ project.cover.image.url }}" />
 </section>
 <section id="project-detail">
     <div>
         {% for photo in project.photos.all %}
-            <a href="{{ photo.image.url }}">
+            <a href="#" class="project-photo">
                 {% thumbnail photo.image "75x75" crop="center" as im %}
                 <img src="{{ im.url }}" alt="{{photo.title}}">
                 {% endthumbnail %}
