@@ -1,17 +1,30 @@
 {% extends 'base.html' %}
 {% load thumbnail %}
+{% block scripts %}
+<script type="text/javascript">
+    function showImage(imgName) {
+        var curLink = document.getElementById('current-link');
+        var curImage = document.getElementById('project-selected-image');
+        var theSource = imgName;
+        curLink.href = imgName;
+        curImage.src = theSource;
+        curImage.alt = imgName;
+        curImage.title = imgName;
+    }
+</script>
+{% endblock %}
 {% block body %}
 <section id="project-detail-highlighted-image">
-    <img id="project-selected-image" src="{{ project.cover.image.url }}" />
+    <a id="current-link" href=""><img id="project-selected-image" src="{{ project.cover.image.url }}" /></a>
 </section>
 <section id="project-detail">
     <div>
         {% for photo in project.photos.all %}
-            <a href="#" class="project-photo">
+            <item id="project-photo" >
                 {% thumbnail photo.image "75x75" crop="center" as im %}
-                <img src="{{ im.url }}" alt="{{photo.title}}">
+                <img src="{{ im.url }}" alt="{{ im.url }}" title="{{ photo.id }}" onclick="showImage('{{ photo.image.url }}');">
                 {% endthumbnail %}
-            </a>
+            </item>
         {% endfor %}
     </div>
     <h1>{{ project.title }}</h1>

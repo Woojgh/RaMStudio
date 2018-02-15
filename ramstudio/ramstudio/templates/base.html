@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style/base.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style/layout.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style/module.css' %}">
+    {% block scripts %}
+    {% endblock %}
   </head>
   <body>
     <header>
@@ -62,7 +64,6 @@
       {% endblock %}
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="{% static 'scripts/nav.js' %}"></script>
-      <script src="{% static 'scripts/project_image_inspect.js' %}"></script>
     </footer>
   </body>
 </html>
