@@ -23,7 +23,7 @@ class Photo(models.Model):
 class Project(models.Model):
     """Album of Photos created by the User."""
 
-    photos = models.ManyToManyField(Photo, related_name='project')
+    photos = models.ManyToManyField(Photo, related_name='projects')
     title = models.CharField(max_length=180, blank=True, default='Untitled')
     cover = models.ForeignKey(Photo, blank=True, null=True, related_name='+', on_delete='CASCADE')
     description = models.TextField(blank=True, null=True)

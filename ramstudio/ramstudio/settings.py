@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ramstudio',
     'projects',
+    'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [

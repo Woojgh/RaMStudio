@@ -5,11 +5,21 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.views.generic import ListView,CreateView
 from django.views import View
 from django.urls import reverse_lazy
-class ProjectsView(ListView):
-    """Render all public album as gallery."""
 
-    template_name = "projects.html"
-    model = Project
+
+class ProjectsView(ListView):
+    """Render all projects."""
+
+    context_object_name = 'projects'
+    template_name = 'projects.html'
+    queryset = Project.objects.all()
+    # model = Project
+
+    def get_context_data(self):
+        context = super(ProjectsView, self).get_context_data()
+        # context = super().get_context_data(**kwargs)
+        # import pdb;pdb.set_trace()
+        return context
 
 
 class ProjectCreateView(LoginRequiredMixin, CreateView):

@@ -1,3 +1,5 @@
+/* #### Base #### */
+
 nav {
     border-radius: 10px;
     float: right;
@@ -10,6 +12,10 @@ nav ul{
 	margin: 0;
 	padding: 0;
 }
+
+/* #### Classes #### */
+
+
 .access-menu{
 	display: table;
 	margin: 1em auto;
@@ -62,6 +68,63 @@ nav ul{
 .is-show{
 	left: auto;
 	top: 100%;
+}
+.project-item {
+    color: white;
+    background-color: #212020e6;
+    display: inline;
+    float: left;
+    height: 30vw;
+    margin: 1%;
+    width: 28%;
+    border-radius: 10px;
+}
+.project-image {
+    height:17vw;
+    width: 17vw;
+}
+.project-list {
+    height: 100%;
+    left: 13vw;
+    position: fixed;
+    width: 74vw;
+    top:20%;
+}
+
+
+/* #### IDs #### */
+
+
+#home-projects {
+    background-color: #444;
+    color: #999;
+    display: inline-flex;
+    left: 46%;
+    position: absolute;
+    top: 72%;
+    width: 50%;
+}
+#home-current-project {
+    margin: auto;
+    padding-top: 20px;
+    /* display: inline; */
+}
+#home-current-project img {
+    /* display: block; */
+}
+#home-current-project p {
+    /* display: inline; */
+}
+#home-project-2 {
+    margin: auto;
+    padding-top: 20px;
+    /* display: inline; */
+}
+#home-project-2 img {
+    /* display: block; */
+}
+#home-project-2  p{
+    /* display: inline; */
 }
 #title {
     background-color: #444;
