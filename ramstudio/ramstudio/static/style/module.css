@@ -159,9 +159,9 @@ nav ul{
 #home-current-project img {
     width: 100%;
 }
-#home-current-project p {
-    /* display: inline; */
-}
+/* #home-current-project p {
+    display: inline;
+} */
 #home-project-2 {
     margin: auto;
     padding-top: 20px;
@@ -170,8 +170,16 @@ nav ul{
 #home-project-2 img {
     width: 100%
 }
-#home-project-2  p{
-    /* display: inline; */
+/* #home-project-2  p{
+    display: inline;
+} */
+#login {
+    background-color: #444;
+    color: #999;
+    left: 31%;
+    position: absolute;
+    top: 35%;
+
 }
 #project-create-form {
     position: absolute;
