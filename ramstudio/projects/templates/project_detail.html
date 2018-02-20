@@ -14,9 +14,6 @@
 </script>
 {% endblock %}
 {% block body %}
-<section id="project-detail-highlighted-image">
-    <a id="current-link" href=""><img id="project-selected-image" src="{{ project.cover.image.url }}" /></a>
-</section>
 <section id="project-detail">
     <div>
         {% for photo in project.photos.all %}
@@ -33,6 +30,10 @@
         <li> {{ project.description }}</li>
         {% endif %}
     </ul>
+    <a id="project-back-arrow" href="/projects/"><p>Back to Projects</p><img src="https://i.stack.imgur.com/B2j6l.png" /></a>
     <p id="project-date">Date uploaded: {{ project.date_uploaded }}</p>
+</section>
+<section id="project-detail-highlighted-image">
+    <a id="current-link" href="{{ project.cover.image.url }}"><img id="project-selected-image" src="{{ project.cover.image.url }}" /></a>
 </section>
 {% endblock %}

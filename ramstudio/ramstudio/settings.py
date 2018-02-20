@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'ramstudio',
     'projects',
     'sorl.thumbnail',
+    'registration',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +49,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+ACCOUNT_ACTIVATION_DAYS = 7
 
 # SECURE_SSL_REDIRECT = True
 # SESSION_COOKIE_SECURE = True
