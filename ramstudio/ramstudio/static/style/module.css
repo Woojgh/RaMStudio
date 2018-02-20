@@ -17,12 +17,6 @@ nav ul{
 /* #### Classes #### */
 
 
-.about {
-    background-color: #444;
-    border-radius: 7px;
-    position: relative;
-    width: 30%;
-}
 .access-menu{
 	display: table;
 	margin: 1em auto;
@@ -103,32 +97,66 @@ nav ul{
 /* #### IDs #### */
 
 
-
-#about-section {
-    position: absolute;
-    top: 11%;
-    width: 85%;
-    height: 87%;
-    left: 14%;
-    border-radius: 10px;
-    font-size: 30px;
-    /* padding: 2vw 1vw 1vw 1vw; */
-    /* margin: 2vw; */
+#about-statement {
+    background-color: #444;
+    border-radius: 7px;
+    position: relative;
+    text-align: center;
+    width: 81%;
 }
-  
+#about-section {
+    border-radius: 10px;
+    color: #999;
+    font-size: 30px;
+    left: 16%;
+    position: fixed;
+    width: 78%;
+    top: 11%;
+}
+#about-bio {
+    background-color: #444;
+    border-radius: 10px;
+    font-size: 27px;
+    left: 82%;
+    width: 17%;
+    position: fixed;
+    text-align: center;
+    top: 5.5%
+}
+#about-bio li {
+    display:inline;
+}
+#about-bio img {
+    margin-bottom: -7%;
+}
+.about-bio-info {
+    margin: 5.5%;
+    font-size: 24px;
+}
+#about-bio ul {
+    padding: 0%;
+}
+.about-bio-name {
+    background-color: #333;
+    border-radius: 4px;
+    font-size: 35px;
+    margin: auto;
+}
+#about-contact {
+    background-color: #444;
+    border-radius: 10px;
+    left: 15%;
+    position: fixed;
+    text-align: center;
+    top: 69%;
+    font-size: 19px;
+    padding: .5%;
+}
 #aboutpage ul li {
     text-decoration: none;
     list-style: none;
 }
 #contact-form {
-    background-color: #444;
-    border-radius: 10px;
-    left: 35%;
-    position: fixed;
-    text-align: center;
-    top: 30%;
-}
-#about-contact {
     background-color: #444;
     border-radius: 10px;
     left: 35%;
