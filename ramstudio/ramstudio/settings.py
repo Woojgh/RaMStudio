@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'projects',
     'sorl.thumbnail',
     'registration',
+    'grounds',
+    'contact',
 ]
 
 MIDDLEWARE = [
