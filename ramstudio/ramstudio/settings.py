@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'ramstudio',
     'projects',
     'sorl.thumbnail',
+    'registration',
 ]
 
 MIDDLEWARE = [

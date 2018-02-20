@@ -4,7 +4,7 @@ nav {
     border-radius: 10px;
     font-size: 1.6vw;
     left: 33%;
-    position: absolute;
+    position: fixed;
     width: fit-content;
     z-index: 2;
 }
@@ -17,12 +17,18 @@ nav ul{
 /* #### Classes #### */
 
 
+.about {
+    background-color: #444;
+    border-radius: 7px;
+    position: relative;
+    width: 30%;
+}
 .access-menu{
 	display: table;
 	margin: 1em auto;
 }
 .access-menu > li{
-	background: #444;
+	background: #343434;
 	display: inline-block;
 	position: relative;
 }
@@ -72,8 +78,9 @@ nav ul{
 }
 .project-item {
     background-color: #444;
-    color: #999;
     border-radius: 10px;
+    color: #999;
+    display: inline-block;
     list-style: none;
     margin: auto;
     padding: 1%;
@@ -87,7 +94,7 @@ nav ul{
 .project-list {
     height: 100%;
     left: 13vw;
-    position: fixed;
+    position: absolute;
     width: 74vw;
     top:20%;
 }
@@ -96,12 +103,7 @@ nav ul{
 /* #### IDs #### */
 
 
-.about {
-    background-color: #444;
-    border-radius: 7px;
-    position: relative;
-    width: 30%;
-}
+
 #about-section {
     position: absolute;
     top: 11%;
@@ -138,6 +140,7 @@ nav ul{
     padding: 1%;
     position: absolute;
     top: 16%;
+    width: 44%;
 }
 #home-pics img {
     width: 100%;
@@ -153,8 +156,9 @@ nav ul{
 }
 #home-current-project {
     margin: auto;
-    padding-top: 20px;
+    padding-top: 3px;
     /* display: inline; */
+    width: 45%;
 }
 #home-current-project img {
     width: 100%;
@@ -166,6 +170,7 @@ nav ul{
     margin: auto;
     padding-top: 20px;
     /* display: inline; */
+    width: 45%;
 }
 #home-project-2 img {
     width: 100%
@@ -180,6 +185,19 @@ nav ul{
     position: absolute;
     top: 35%;
 
+}
+#project-back-arrow {
+    color: #999;
+    left: 76%;
+    position: fixed;
+    text-decoration: none;
+    top: 65%;
+}
+#project-back-arrow img {
+    width:16%;
+}
+#project-back-arrow p {
+    display: inline;
 }
 #project-create-form {
     position: absolute;
@@ -214,6 +232,7 @@ nav ul{
     text-align: center;
 }
 #project-detail-highlighted-image img {
+    height: 32vw;
     width: 89%;
 }
 #project-detail div {
@@ -233,7 +252,7 @@ nav ul{
     border-radius: 10px;
     color:#999;
     left: -16%;
-    position: absolute;
+    position: fixed;
     top: 44%;
     width: 48%;
     -webkit-transform: rotate(-90deg);
