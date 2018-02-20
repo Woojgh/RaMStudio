@@ -7,8 +7,25 @@
         This is the about page that tells you things about us.<br>
         This is the about page that tells you things about us.</p>
     </div>
-    <div class="contact-form">
-        <p>Contact</p>
+    <div id="bio-section">
+        <ul>
+            <li id="bio-1">
+                <img src="https://via.placeholder.com/200x200" />
+            </li>
+            <li id="bio-2">
+                    <img src="https://via.placeholder.com/200x200" />
+            </li>
+            <li id="bio-3">
+                    <img src="https://via.placeholder.com/200x200" />
+            </li>
+        </ul>
+    </div>
+    <div id="about-contact">
+        <form role="form" action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
     </div>
 </section>
 {% endblock %}

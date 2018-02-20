@@ -10,6 +10,8 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('accounts/', include('registration.backends.hmac.urls')),
+    path('contact/', include('contact.urls')),
+    path('grounds/', include('grounds.urls')),
     path('login/', auth_views.login, {'template_name': 'registration/login.html'}, name='login'),
     # path('logout/', logout_view.as_view(), name='logout'),
     path('contact/', views.contact, name='contact'),

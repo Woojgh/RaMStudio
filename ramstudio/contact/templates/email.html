@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block contact-title %}{{ block.super }}{% endblock %}
+
+{% block body %}
+<section id="contact-form">
+<p >Contact</p>
+<form role="form" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+</section>
+{% endblock %}

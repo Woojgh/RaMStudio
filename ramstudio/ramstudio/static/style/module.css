@@ -120,7 +120,29 @@ nav ul{
     text-decoration: none;
     list-style: none;
 }
-
+#contact-form {
+    background-color: #444;
+    border-radius: 10px;
+    left: 35%;
+    position: fixed;
+    text-align: center;
+    top: 30%;
+}
+#about-contact {
+    background-color: #444;
+    border-radius: 10px;
+    left: 35%;
+    position: fixed;
+    text-align: center;
+    top: 30%;
+}
+#grounds img {
+    width: 70%;
+    height: 69%;
+    position: absolute;
+    top: 16%;
+    left: 19%;
+}
 #home-about {
     background-color: #444;
     color: #999;
