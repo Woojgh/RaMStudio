@@ -1,29 +1,150 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 {% csrf_token %}
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
+      <!-- <script type="text/javascript">
+    
+        // The Browser API key obtained from the Google API Console.
+        var developerKey = 'AIzaSyBqsXnJ9krBKJgbHCnxc0iT4I60wEXNzOY';
+    
+        // The Client ID obtained from the Google API Console. Replace with your own Client ID.
+        var clientId = '837799204427-4hqivf4un6pi18jkg30meg814qbmhf8a.apps.googleusercontent.com';
+    
+        var appId = "837799204427";
+        // Scope to use to access user's photos.
+        var scope = ['https://www.googleapis.com/auth/drive'];
+    
+        var pickerApiLoaded = true;
+        var oauthToken;
+    
+        // Use the API Loader script to load google.picker and gapi.auth.
+        function loadPicker() {
+          gapi.load('auth', {'callback': onAuthApiLoad});
+          gapi.load('picker', {'callback': onPickerApiLoad});
+        }
+
+        function onAuthApiLoad() {
+          window.gapi.auth.authorize(
+              {
+                'client_id': clientId,
+                'scope': scope,
+                'immediate': false
+              },
+              handleAuthResult);
+        }
+
+        function onPickerApiLoad() {
+          pickerApiLoaded = true;
+          createPicker();
+        }
+
+        function handleAuthResult(authResult) {
+          if (authResult && !authResult.error) {
+            oauthToken = authResult.access_token;
+            createPicker();
+          }
+        }
+
+        function createPicker() {
+          if (pickerApiLoaded && oauthToken) {
+            var view = new google.picker.View(google.picker.ViewId.DOCS);
+            view.setMimeTypes("image/png,image/jpeg,image/jpg");
+            var picker = new google.picker.PickerBuilder()
+                .enableFeature(google.picker.Feature.NAV_HIDDEN)
+                .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
+                .setAppId(appId)
+                .setOAuthToken(oauthToken)
+                .addView(view)
+                .addView(new google.picker.DocsUploadView())
+                .setDeveloperKey(developerKey)
+                .setCallback(pickerCallback)
+                .build();
+            picker.setVisible(true);
+          }
+        }
+
+        // A simple callback implementation.
+        function pickerCallback(data) {
+          if (data.action == google.picker.Action.PICKED) {
+            var fileId = data.docs[0].id;
+            alert('The user selected: ' + fileId);
+          }
+        }
+        function onApiLoad() {
+          gapi.load('auth2', onAuthApiLoad);
+          gapi.load('picker', onPickerApiLoad);
+        }
+    
+        function onAuthApiLoad() {
+          var authBtn = document.getElementById('auth');
+          authBtn.disabled = false;
+          authBtn.addEventListener('click', function() {
+            gapi.auth2.authorize({
+              client_id: clientId,
+              scope: scope
+            }, handleAuthResult);
+          });
+        }
+    
+        function onPickerApiLoad() {
+          pickerApiLoaded = true;
+          createPicker();
+        }
+    
+        function handleAuthResult(authResult) {
+          if (authResult && !authResult.error) {
+            oauthToken = authResult.access_token;
+            createPicker();
+          }
+        }
+    
+        // Create and render a Picker object for picking user Photos.
+        function createPicker() {
+          if (pickerApiLoaded && oauthToken) {
+            var picker = new google.picker.PickerBuilder().
+                addView(google.picker.ViewId.DOCS_IMAGES).
+                setOAuthToken(oauthToken).
+                setDeveloperKey(developerKey).
+                setCallback(pickerCallback).
+                build();
+            picker.setVisible(true);
+          }
+        }
+    
+        function pickerCallback(data) {
+          var url = 'nothing';
+          if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
+            var doc = data[google.picker.Response.DOCUMENTS][0];
+            url = doc[google.picker.Document.URL];
+          }
+          var message = 'You picked: ' + url;
+          document.getElementById('result').innerHTML = message;
+        } -->
+      <!-- </script> -->
     <link rel="stylesheet" type="text/css" href="{% static 'style/base.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style/layout.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style/module.css' %}">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     {% block scripts %}
     {% endblock %}
   </head>
   <body>
-    <header>
-    <div>
-    {% if user.is_authenticated %}
-      <a href="/logout"> Logout</a>
-      <a href="/admin">Admin</a>
-    {% block links %}
-    {% endblock %}
-    {% else %}
-      <a href="/login"> Login</a>
-    {% endif %}
-    </div>
-    <nav role="navigation">
-      <ul class="access-menu">
-        <li><a href="/"> Home</a></li>
+      <button type="button" id="pick">Pick File</button>
+      <header>
+        <div>
+          {% if user.is_authenticated %}
+          <a href="/logout"> Logout</a>
+          <a href="/admin">Admin</a>
+          {% block links %}
+          {% endblock %}
+          {% else %}
+          <a href="/login"> Login</a>
+          {% endif %}
+        </div>
+        <nav role="navigation">
+          <ul class="access-menu">
+            <li><a href="/"> Home</a></li>
         <li><a href="/grounds">Grounds</a>
           <!-- <ul class="access-submenu">
             <li><a href="#">Greenhouse</a></li>
@@ -35,38 +156,58 @@
             <li><a href="#">Back Deck</a></li>
             <li><a href="#">Hasta Bend</a></li>
           </ul></li> -->
-        <!-- <li><a href="/shop">Shop</a></li> -->
-        <li><a href="/projects">Projects</a>
-          <ul class="access-submenu">
-            <!-- <li><a href="#">Current</a></li>
-            <li><a href="#">Completed</a></li> -->
-          </ul></li>
-        <!-- <li><a href="/blog"> Blog</a></li> -->
-        <li><a href="/about">About</a>
-          <ul class="access-submenu">
-            <li><a href="/contact">Contact</a></li>
-          </ul></li>
-      {% block nav %}
-      {% endblock %}
-      </ul>
-    </nav>
-    <div id="title">
-      <p>Ram &nbsp Studio</p>
-    </div>
-    </header>
-    <main>
-      {% block newsletter %}
-      {% endblock %}
-      {% block body %}
-      {% endblock %}
-      <section id="content" class="tab-content">
-      </section>
-    </main>
-    <footer>
-      {% block foot %}
-      {% endblock %}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="{% static 'scripts/nav.js' %}"></script>
-    </footer>
+          <!-- <li><a href="/shop">Shop</a></li> -->
+          <li><a href="/projects">Projects</a>
+            <ul class="access-submenu">
+              <!-- <li><a href="#">Current</a></li>
+                <li><a href="#">Completed</a></li> -->
+              </ul></li>
+              <!-- <li><a href="/blog"> Blog</a></li> -->
+              <li><a href="/about">About</a>
+                <ul class="access-submenu">
+                  <li><a href="/contact">Contact</a></li>
+                </ul></li>
+                {% block nav %}
+                {% endblock %}
+              </ul>
+            </nav>
+            <div id="title">
+              <p>Ram &nbsp Studio</p>
+            </div>
+          </header>
+          <main>
+            {% block newsletter %}
+            {% endblock %}
+            {% block body %}
+            {% endblock %}
+            <section id="content" class="tab-content">
+            </section>
+          </main>
+          <footer>
+            {% block foot %}
+            {% endblock %}
+            <script>
+              function initPicker() {
+                var picker = new FilePicker({
+                  apiKey: 'AIzaSyBqsXnJ9krBKJgbHCnxc0iT4I60wEXNzOY',
+                  clientId: '837799204427-rroo1ci88uk1htih9nd0nv6pd55buogn',
+                  buttonEl: document.getElementById('pick'),
+                  onSelect: function(file) {
+                    console.log(file);
+                    alert('Selected ' + file.title);
+                  }
+                });	
+              }
+              </script>
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://www.google.com/jsapi?key=AIzaSyBqsXnJ9krBKJgbHCnxc0iT4I60wEXNzOY"></script>
+            <script src="https://apis.google.com/js/client.js?onload=initPicker"></script>
+            <script src="{% static 'scripts/nav.js' %}"></script>
+            <script src="{% static 'scripts/filepicker.js' %}"></script>
+          </footer>
+    <!-- <button type="button" id="auth" disabled>Authenticate</button>
+    <div id="result"></div>
+    <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=loadPicker"></script> -->
   </body>
 </html>

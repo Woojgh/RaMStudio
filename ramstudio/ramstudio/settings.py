@@ -152,7 +152,7 @@ if DEBUG:
 
 else:
 
-    AWS_STORAGE_BUCKET_NAME = 'rvfm'
+    AWS_STORAGE_BUCKET_NAME = 'ramstudio'
     AWS_ACCESS_KEY_ID = os.environ.get('IAM_USER_ACCESS_KEY_ID')
 
     AWS_SECRET_ACCESS_KEY = os.environ.get('IAM_USER_SECRET_ACCESS_KEY')
@@ -163,13 +163,13 @@ else:
 
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
     STATICFILES_LOCATION = 'static'
-    STATICFILES_STORAGE = 'RVFS.custom_storages.StaticStorage'
+    STATICFILES_STORAGE = 'ramstudio.custom_storages.StaticStorage'
     STATIC_URL = 'https://{}/{}/'.format(
         AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION
     )
 
     MEDIAFILES_LOCATION = 'media'
-    DEFAULT_FILE_STORAGE = 'RVFS.custom_storages.MediaStorage'
+    DEFAULT_FILE_STORAGE = 'ramstudio.custom_storages.MediaStorage'
     MEDIA_URL = 'https://{}/{}/'.format(
         AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION
     )
