@@ -71,6 +71,7 @@
       </script>
 {% endblock %}
 {% block body %}
+<button type="button" id="pick">Pick File</button>
 <section id="project-create-form">
         <h1>Create New Project</h1>
         <hr />
@@ -84,14 +85,4 @@
             </div>
         </form>
     </section>
-  <button type="button" id="auth" disabled>Authenticate</button>
-
-  <div id="result"></div>
-
-  <!-- The Google API Loader script. -->
-  
   {% endblock %}
-  {% block foot %}
-  
-  <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
-{% endblock %}

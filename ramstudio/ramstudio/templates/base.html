@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 {% csrf_token %}
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <link rel="stylesheet" type="text/css" href="{% static 'style/base.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style/layout.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style/module.css' %}">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     {% block scripts %}
     {% endblock %}
   </head>
   <body>
-    <header>
-    <div>
-    {% if user.is_authenticated %}
-      <a href="/logout"> Logout</a>
-      <a href="/admin">Admin</a>
-    {% block links %}
-    {% endblock %}
-    {% else %}
-      <a href="/login"> Login</a>
-    {% endif %}
-    </div>
-    <nav role="navigation">
-      <ul class="access-menu">
-        <li><a href="/"> Home</a></li>
+      <header>
+        <div>
+          {% if user.is_authenticated %}
+          <a href="/logout"> Logout</a>
+          <a href="/admin">Admin</a>
+          {% block links %}
+          {% endblock %}
+          {% else %}
+          <a href="/login"> Login</a>
+          {% endif %}
+        </div>
+        <nav role="navigation">
+          <ul class="access-menu">
+            <li><a href="/"> Home</a></li>
         <li><a href="/grounds">Grounds</a>
           <!-- <ul class="access-submenu">
             <li><a href="#">Greenhouse</a></li>
@@ -35,38 +36,58 @@
             <li><a href="#">Back Deck</a></li>
             <li><a href="#">Hasta Bend</a></li>
           </ul></li> -->
-        <!-- <li><a href="/shop">Shop</a></li> -->
-        <li><a href="/projects">Projects</a>
-          <ul class="access-submenu">
-            <!-- <li><a href="#">Current</a></li>
-            <li><a href="#">Completed</a></li> -->
-          </ul></li>
-        <!-- <li><a href="/blog"> Blog</a></li> -->
-        <li><a href="/about">About</a>
-          <ul class="access-submenu">
-            <li><a href="/contact">Contact</a></li>
-          </ul></li>
-      {% block nav %}
-      {% endblock %}
-      </ul>
-    </nav>
-    <div id="title">
-      <p>Ram &nbsp Studio</p>
-    </div>
-    </header>
-    <main>
-      {% block newsletter %}
-      {% endblock %}
-      {% block body %}
-      {% endblock %}
-      <section id="content" class="tab-content">
-      </section>
-    </main>
-    <footer>
-      {% block foot %}
-      {% endblock %}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="{% static 'scripts/nav.js' %}"></script>
-    </footer>
+          <!-- <li><a href="/shop">Shop</a></li> -->
+          <li><a href="/projects">Projects</a>
+            <ul class="access-submenu">
+              <!-- <li><a href="#">Current</a></li>
+                <li><a href="#">Completed</a></li> -->
+              </ul></li>
+              <!-- <li><a href="/blog"> Blog</a></li> -->
+              <li><a href="/about">About</a>
+                <ul class="access-submenu">
+                  <li><a href="/contact">Contact</a></li>
+                </ul></li>
+                {% block nav %}
+                {% endblock %}
+              </ul>
+            </nav>
+            <div id="title">
+              <p>Ram &nbsp Studio</p>
+            </div>
+          </header>
+          <main>
+            {% block newsletter %}
+            {% endblock %}
+            {% block body %}
+            {% endblock %}
+            <section id="content" class="tab-content">
+            </section>
+          </main>
+          <footer>
+            {% block foot %}
+            {% endblock %}
+            <script>
+              function initPicker() {
+                var picker = new FilePicker({
+                  apiKey: 'AIzaSyBqsXnJ9krBKJgbHCnxc0iT4I60wEXNzOY',
+                  clientId: '837799204427-rroo1ci88uk1htih9nd0nv6pd55buogn',
+                  buttonEl: document.getElementById('pick'),
+                  onSelect: function(file) {
+                    console.log(file);
+                    alert('Selected ' + file.title);
+                  }
+                });	
+              }
+              </script>
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://www.google.com/jsapi?key=AIzaSyBqsXnJ9krBKJgbHCnxc0iT4I60wEXNzOY"></script>
+            <script src="https://apis.google.com/js/client.js?onload=initPicker"></script>
+            <script src="{% static 'scripts/nav.js' %}"></script>
+            <script src="{% static 'scripts/filepicker.js' %}"></script>
+          </footer>
+    <!-- <button type="button" id="auth" disabled>Authenticate</button>
+    <div id="result"></div>
+    <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=loadPicker"></script> -->
   </body>
 </html>

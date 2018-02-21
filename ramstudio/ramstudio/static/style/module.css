@@ -186,13 +186,15 @@ nav ul{
 }
 #home-pics {
     background-color: #444;
-    left: 48%;
+    height: 50%;
+    left: 49%;
     padding: 1%;
     position: absolute;
-    top: 16%;
-    width: 44%;
+    top: 17%;
+    width: 42%;
 }
 #home-pics img {
+    height: 100%;
     width: 100%;
 }
 #home-projects {
