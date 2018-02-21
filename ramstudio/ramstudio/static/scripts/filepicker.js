@@ -45,7 +45,8 @@
 		 */
 		_showPicker: function() {
 			var accessToken = gapi.auth.getToken().access_token;
-			this.picker = new google.picker.PickerBuilder().
+            this.picker = new google.picker.PickerBuilder().
+                addView(google.picker.ViewId.PHOTOS).
 				addView(google.picker.ViewId.DOCUMENTS).
 				setAppId(this.clientId).
 				setOAuthToken(accessToken).
@@ -77,7 +78,24 @@
 			if (this.onSelect) {
 				this.onSelect(file);
 			}
-		},
+        },
+        _downloadFile: function(file, callback) {
+            if (file.downloadUrl) {
+              var accessToken = gapi.auth.getToken().access_token;
+              var xhr = new XMLHttpRequest();
+              xhr.open('GET', file.downloadUrl);
+              xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+              xhr.onload = function() {
+                callback(xhr.responseText);
+              };
+              xhr.onerror = function() {
+                callback(null);
+              };
+              xhr.send();
+            } else {
+              callback(null);
+            }
+          },
 		
 		/**
 		 * Called when the Google Drive file picker API has finished loading.
@@ -102,7 +120,7 @@
 		_doAuth: function(immediate, callback) {	
 			gapi.auth.authorize({
 				client_id: this.clientId + '.apps.googleusercontent.com',
-				scope: 'https://www.googleapis.com/auth/drive',
+				scope: ['https://www.googleapis.com/auth/drive', ''],
 				immediate: false
 			}, callback);
 		}
