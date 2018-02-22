@@ -80,7 +80,10 @@ nav ul{
     background-color: #3330;
     display: inline;
     height: 50%;
-    width: 32%;
+    width: 33.09%;
+}
+.grounds-thumb {
+
 }
 .is-show{
     left: auto;
@@ -196,7 +199,8 @@ nav ul{
     top: 30%;
 }
 #grounds {
-    background-image: url("/media/images/grounds.png");
+    background-image: url("/media/images/grounds.jpg");
+    background-size: cover;
     height: 69%;
     left: 19%;
     position: absolute;
@@ -205,11 +209,28 @@ nav ul{
 }
 #grounds-shop {
     background-color: #444;
-    height: 73%;
+    height: fit-content;
     left: 19%;
     position: absolute;
     top: 19%;
     width: 72%;
+}
+#grounds-thumbnails {
+    background-color: #222;
+    height: fit-content;
+    padding:.5%;
+    width: fit-content;
+}
+#grounds-shop-image-viewer {
+    background-color: #222;
+    left: 21%;
+    height: fit-content;;
+    position: fixed;
+    text-align: center;
+    top: 32%;
+    width: 68%;
+}
+#grounds-shop-selected-image {
 }
 #home-about {
     background-color: #444;
