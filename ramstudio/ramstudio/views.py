@@ -4,11 +4,11 @@ from django.shortcuts import render, redirect
 from django.shortcuts import render
 from contact.forms import ContactForm
 
-def home(request):
+def Home(request):
     return render(request, 'home.html')
 
 
-def about(request):
+def About(request):
     if request.method == 'GET':
         form = ContactForm()
     else:
@@ -25,11 +25,10 @@ def about(request):
     return render(request, 'about.html', {'form': form})
 
     
-def contact(request):
+def Contact(request):
     return render(request, 'contact.html')
 
 
-def login(request):
+def Login(request):
     return render(request, 'login.html')
-
 

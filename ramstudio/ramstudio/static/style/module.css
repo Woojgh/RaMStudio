@@ -3,7 +3,7 @@
 nav {
     border-radius: 10px;
     font-size: 1.6vw;
-    left: 33%;
+    left: 21%;
     position: fixed;
     width: fit-content;
     z-index: 2;
@@ -19,7 +19,7 @@ nav ul{
 
 .about-bio-info {
     margin: 5.5%;
-    font-size: 24px;
+    font-size: .6em;
 }
 .about-bio-name {
     background-color: #333;
@@ -79,15 +79,19 @@ nav ul{
 .grounds-button {
     background-color: #3330;
     display: inline;
-    height: 50%;
-    width: 33.09%;
+    height: 33.19%;
+    width: 33.06%;
 }
 .grounds-thumb {
-
+    
 }
 .is-show{
     left: auto;
 	top: 100%;
+}
+.item-image {
+    height:17vw;
+    width: 17vw;
 }
 .project-item {
     background-color: #444;
@@ -111,27 +115,23 @@ nav ul{
     width: 74vw;
     top:20%;
 }
+.shop-item {
+    background-color: #444;
+    border-radius: 10px;
+    color: #999;
+    display: inline-block;
+    list-style: none;
+    margin: auto;
+    padding: 1%;
+    text-align: center;
+    width: 28%;
+}
+
 
 
 /* #### IDs #### */
 
 
-#about-statement {
-    background-color: #444;
-    border-radius: 7px;
-    position: relative;
-    text-align: center;
-    width: 81%;
-}
-#about-section {
-    border-radius: 10px;
-    color: #999;
-    font-size: 30px;
-    left: 16%;
-    position: fixed;
-    width: 78%;
-    top: 11%;
-}
 #about-bio {
     background-color: #444;
     border-radius: 10px;
@@ -146,7 +146,9 @@ nav ul{
     display:inline;
 }
 #about-bio img {
+    height: 7em;
     margin-bottom: -7%;
+    width: 7em;
 }
 #about-bio ul {
     padding: 0%;
@@ -160,6 +162,22 @@ nav ul{
     top: 69%;
     font-size: 19px;
     padding: .5%;
+}
+#about-section {
+    border-radius: 10px;
+    color: #999;
+    font-size: 1.7em;
+    left: 16%;
+    position: fixed;
+    width: 78%;
+    top: 11%;
+}
+#about-statement {
+    background-color: #444;
+    border-radius: 7px;
+    position: relative;
+    text-align: center;
+    width: 81%;
 }
 #aboutpage ul li {
     text-decoration: none;
@@ -184,10 +202,10 @@ nav ul{
 }
 #back-to-grounds-map-button p {
     color: #999;
-    font-size: 4vw;
-    left: 16.2%;
-    position: fixed;
-    top: 1.5%;
+    font-size: 4em;
+    left: 15.2%;
+    position: absolute;
+    top: -71.5%;
     z-index: 2;
 }
 #contact-form {
@@ -207,7 +225,81 @@ nav ul{
     top: 16%;
     width: 70%;
 }
+#grounds-deck {
+    background-color: #444;
+    height: fit-content;
+    left: 19%;
+    position: absolute;
+    top: 19%;
+    width: 72%;
+}
+#grounds-firepit {
+    background-color: #444;
+    height: fit-content;
+    left: 19%;
+    position: absolute;
+    top: 19%;
+    width: 72%;
+}
+#grounds-front {
+    background-color: #444;
+    height: fit-content;
+    left: 19%;
+    position: absolute;
+    top: 19%;
+    width: 72%;
+}
+#grounds-greenhouse {
+    background-color: #444;
+    height: fit-content;
+    left: 19%;
+    position: absolute;
+    top: 19%;
+    width: 72%;
+}
+#grounds-hasta {
+    background-color: #444;
+    height: fit-content;
+    left: 19%;
+    position: absolute;
+    top: 19%;
+    width: 72%;
+}
+#grounds-meditation {
+    background-color: #444;
+    height: fit-content;
+    left: 19%;
+    position: absolute;
+    top: 19%;
+    width: 72%;
+}
+#grounds-pond {
+    background-color: #444;
+    height: fit-content;
+    left: 19%;
+    position: absolute;
+    top: 19%;
+    width: 72%;
+}
 #grounds-shop {
+    background-color: #444;
+    height: fit-content;
+    left: 19%;
+    position: absolute;
+    top: 19%;
+    width: 72%;
+}
+#grounds-title {
+    color: #999;
+    background-color: #444;
+    font-size: 3vw;
+    left: 35%;
+    margin: 1%;
+    position: absolute;
+    top: -70%;
+    width: fit-content;
+}
+#grounds-zen {
     background-color: #444;
     height: fit-content;
     left: 19%;
@@ -218,10 +310,11 @@ nav ul{
 #grounds-thumbnails {
     background-color: #222;
     height: fit-content;
+    margin: 1%;
     padding:.5%;
     width: fit-content;
 }
-#grounds-shop-image-viewer {
+#grounds-image-viewer {
     background-color: #222;
     left: 21%;
     height: fit-content;;
@@ -230,23 +323,24 @@ nav ul{
     top: 32%;
     width: 68%;
 }
-#grounds-shop-selected-image {
+#grounds-selected-image {
 }
 #home-about {
     background-color: #444;
     color: #999;
-    height: 68%;
+    height: 73%;
     left: 14.5%;
     padding: 2%;
     position: absolute;
-    top: 17%;
+    top: 13%;
     width: 25%;
 }
 #home-about img {
+    height: 80%;
     width: 100%;
 }
 #home-about p {
-    font-size: 1.09vw;
+    font-size: 1.06vw;
 }
 #home-pics {
     background-color: #444;
@@ -302,6 +396,63 @@ nav ul{
     top: 35%;
 
 }
+#item-back-arrow {
+    color: #999;
+    left: 76%;
+    position: fixed;
+    text-decoration: none;
+    top: 65%;
+}
+#item-back-arrow img {
+    width:16%;
+}
+#item-back-arrow p {
+    display: inline;
+}
+#item-create-form {
+    position: absolute;
+    text-align: center;
+    color: #999;
+    background-color: #444;
+    border-radius: 10px;
+    top: 15%;
+    left: 23%;
+    padding: 9%;
+}
+#item-detail {
+    background-color: #444;
+    border-radius: 10px;
+    color:#999;
+    position: absolute;
+    left: 14%;
+    top: 65%;
+    width: 71%;
+}
+#item-detail-highlighted-image {
+    background-color: #444;
+    border-radius: 10px;
+    left: 21%;
+    position: absolute;
+    top: 13%;
+    padding: .6%;
+    width: 55%;
+    text-align: center;
+}
+#item-detail-highlighted-image img {
+    width: 89%;
+}
+#item-detail div {
+    padding:1%;
+}
+#item-detail h1 {
+    font-size: 40px;
+    padding-left: 32%;
+}
+#item-detail ul {
+    list-style-type: none;
+    text-align: center;
+    width: 65%;
+}
 #project-back-arrow {
     color: #999;
     left: 76%;
@@ -342,13 +493,13 @@ nav ul{
     border-radius: 10px;
     left: 21%;
     position: absolute;
-    top: 11%;
+    top: 13%;
     padding: .6%;
     width: 55%;
     text-align: center;
 }
 #project-detail-highlighted-image img {
-    height: 32vw;
+    height:32em;
     width: 89%;
 }
 #project-detail div {
@@ -362,6 +513,32 @@ nav ul{
     list-style-type: none;
     text-align: center;
     width: 65%;
+}
+#shop-list {
+    height: 100%;
+    left: 13vw;
+    position: absolute;
+    width: 74vw;
+    top:20%;
+}
+#shopping-cart {
+    background-color: #444;
+    border-radius: 10px;
+    color: #999;
+    left: 20%;
+    position: absolute;
+    top: 23%;
+    width: 62%;
+}
+#shopping-cart img {
+    padding: 3%;
+    width: 95%;
+}
+#shopping-cart-icon {
+    left: 139%;
+    position: absolute;
+    top: -6%;
+    width: 4%;
 }
 #title {
     background-color: #444;

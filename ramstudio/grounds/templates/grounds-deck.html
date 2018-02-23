@@ -4,18 +4,18 @@
 <script>
     function changeImage(imgName)
     {
-    image = document.getElementById('grounds-shop-selected-image');
+    image = document.getElementById('grounds-selected-image');
     image.src = imgName;
     }
 </script>
 {% endblock %}
 {% block body %}
-<section id="grounds-shop">
+<section id="grounds-deck">
     <div id="back-to-grounds-map-button">
         <p>Map</p>
         <a href="/grounds"></a>
     </div>
-    <div id="grounds-title">Shop</div>
+    <div id="grounds-title">Back Deck</div>
     <div id="grounds-thumbnails">
         <img onclick="changeImage('/media/images/raspberry-pi-logo.png')" class="grounds-thumb" src="http://via.placeholder.com/75x75" />
         <img onclick="changeImage('/media/images/raspberry-pi-logo.png')" class="grounds-thumb" src="http://via.placeholder.com/75x75" />
@@ -26,8 +26,8 @@
         <img onclick="changeImage('/media/images/raspberry-pi-logo.png')" class="grounds-thumb" src="http://via.placeholder.com/75x75" />
 
     </div>
-    <div id="grounds-shop-image-viewer">
-        <img id="grounds-shop-selected-image" src="" />
+    <div id="grounds-image-viewer">
+        <img id="grounds-selected-image" src="" />
     </div>
 </section>
 {% endblock %}
