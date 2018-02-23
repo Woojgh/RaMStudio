@@ -15,7 +15,7 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('grounds/', include('grounds.urls')),
     path('login/', auth_views.login, {'template_name': 'registration/login.html'}, name='login'),
-    # path('logout/', logout_view.as_view(), name='logout'),
+    path('logout/', auth_views.logout, name='logout'),
     path('shop/', include('shop.urls')),
     path('projects/', include('projects.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
