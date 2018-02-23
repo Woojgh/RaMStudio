@@ -19,7 +19,7 @@ nav ul{
 
 .about-bio-info {
     margin: 5.5%;
-    font-size: 24px;
+    font-size: .6em;
 }
 .about-bio-name {
     background-color: #333;
@@ -80,7 +80,7 @@ nav ul{
     background-color: #3330;
     display: inline;
     height: 33.19%;
-    width: 33.09%;
+    width: 33.06%;
 }
 .grounds-thumb {
     
@@ -132,22 +132,6 @@ nav ul{
 /* #### IDs #### */
 
 
-#about-statement {
-    background-color: #444;
-    border-radius: 7px;
-    position: relative;
-    text-align: center;
-    width: 81%;
-}
-#about-section {
-    border-radius: 10px;
-    color: #999;
-    font-size: 30px;
-    left: 16%;
-    position: fixed;
-    width: 78%;
-    top: 11%;
-}
 #about-bio {
     background-color: #444;
     border-radius: 10px;
@@ -178,6 +162,22 @@ nav ul{
     top: 69%;
     font-size: 19px;
     padding: .5%;
+}
+#about-section {
+    border-radius: 10px;
+    color: #999;
+    font-size: 1.7em;
+    left: 16%;
+    position: fixed;
+    width: 78%;
+    top: 11%;
+}
+#about-statement {
+    background-color: #444;
+    border-radius: 7px;
+    position: relative;
+    text-align: center;
+    width: 81%;
 }
 #aboutpage ul li {
     text-decoration: none;
@@ -328,18 +328,19 @@ nav ul{
 #home-about {
     background-color: #444;
     color: #999;
-    height: 68%;
+    height: 73%;
     left: 14.5%;
     padding: 2%;
     position: absolute;
-    top: 17%;
+    top: 13%;
     width: 25%;
 }
 #home-about img {
+    height: 80%;
     width: 100%;
 }
 #home-about p {
-    font-size: 1.09vw;
+    font-size: 1.06vw;
 }
 #home-pics {
     background-color: #444;
@@ -438,7 +439,6 @@ nav ul{
     text-align: center;
 }
 #item-detail-highlighted-image img {
-    height:32em;
     width: 89%;
 }
 #item-detail div {
@@ -520,6 +520,12 @@ nav ul{
     position: absolute;
     width: 74vw;
     top:20%;
+}
+#shopping-cart-icon {
+    left: 139%;
+    position: absolute;
+    top: -6%;
+    width: 4%;
 }
 #title {
     background-color: #444;

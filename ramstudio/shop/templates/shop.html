@@ -8,7 +8,7 @@
 {% block body %}
 <section>
     <ul id="shop-list">
-            {% for item in object_list %}
+        {% for item in object_list %}
             <li class="shop-item"> 
                 <p>
                     <a href="item_detail/{{ item.pk }}"><img src="{{ item.cover.image.url }}" class="item-image" /></a>
@@ -19,5 +19,6 @@
         {% empty %}
             <li>No items yet.</li>
         {% endfor %}
-        </ul>
+    </ul>
+</section>
 {% endblock  %}

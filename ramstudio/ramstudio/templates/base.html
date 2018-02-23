@@ -25,67 +25,69 @@
         <nav role="navigation">
           <ul class="access-menu">
             <li><a href="/"> Home</a></li>
-        <li><a href="/grounds">Grounds</a>
-          <ul class="access-submenu">
-            <li><a href="/grounds/greenhouse">Greenhouse</a></li>
-            <li><a href="/grounds/pond">Pond</a></li>
-            <li><a href="/grounds/zen">Zen Garden</a></li>
-            <li><a href="/grounds/firepit">Fire Pit</a></li>
-            <li><a href="/grounds/front">Front Plains</a></li>
-            <li><a href="/grounds/meditation">Meditation</a></li>
-            <li><a href="/grounds/deck">Back Deck</a></li>
-            <li><a href="/grounds/hasta">Hasta Bend</a></li>
-          </ul></li>
-          <li><a href="/shop">Shop</a></li>
-          <li><a href="/projects">Projects</a>
-            <ul class="access-submenu">
-              <!-- <li><a href="#">Current</a></li>
-                <li><a href="#">Completed</a></li> -->
+            <li><a href="/grounds">Grounds</a>
+              <ul class="access-submenu">
+                <li><a href="/grounds/greenhouse">Greenhouse</a></li>
+                <li><a href="/grounds/pond">Pond</a></li>
+                <li><a href="/grounds/zen">Zen Garden</a></li>
+                <li><a href="/grounds/firepit">Fire Pit</a></li>
+                <li><a href="/grounds/front">Front Plains</a></li>
+                <li><a href="/grounds/meditation">Meditation</a></li>
+                <li><a href="/grounds/deck">Back Deck</a></li>
+                <li><a href="/grounds/hasta">Hasta Bend</a></li>
               </ul></li>
-              <!-- <li><a href="/blog"> Blog</a></li> -->
-              <li><a href="/about">About</a>
-                <ul class="access-submenu">
-                  <li><a href="/contact">Contact</a></li>
-                </ul></li>
-                {% block nav %}
-                {% endblock %}
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/projects">Projects</a>
+              <ul class="access-submenu">
+                <!-- <li><a href="#">Current</a></li>
+                  <li><a href="#">Completed</a></li> -->
               </ul>
-            </nav>
-            <div id="title">
-              <p>Ram &nbsp Studio</p>
-            </div>
-          </header>
-          <main>
-            {% block newsletter %}
+            </li>
+              <!-- <li><a href="/blog"> Blog</a></li> -->
+            <li><a href="/about">About</a>
+              <ul class="access-submenu">
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </li>
+            {% block nav %}
             {% endblock %}
-            {% block body %}
-            {% endblock %}
-            <section id="content" class="tab-content">
-            </section>
-          </main>
-          <footer>
-            {% block foot %}
-            {% endblock %}
-            <script>
-              function initPicker() {
-                var picker = new FilePicker({
-                  apiKey: 'AIzaSyBqsXnJ9krBKJgbHCnxc0iT4I60wEXNzOY',
-                  clientId: '837799204427-rroo1ci88uk1htih9nd0nv6pd55buogn',
-                  buttonEl: document.getElementById('pick'),
-                  onSelect: function(file) {
-                    console.log(file);
-                    alert('Selected ' + file.title);
-                  }
-                });	
+          </ul>
+          <a href="/cart"><img id="shopping-cart-icon" src="https://image.flaticon.com/icons/png/128/2/2772.png" /></a>
+        </nav>
+        <div id="title">
+          <p>Ram &nbsp Studio</p>
+        </div>
+      </header>
+      <main>
+        {% block newsletter %}
+        {% endblock %}
+        {% block body %}
+        {% endblock %}
+        <section id="content" class="tab-content">
+        </section>
+      </main>
+      <footer>
+        {% block foot %}
+        {% endblock %}
+        <script>
+          function initPicker() {
+            var picker = new FilePicker({
+              apiKey: 'AIzaSyBqsXnJ9krBKJgbHCnxc0iT4I60wEXNzOY',
+              clientId: '837799204427-rroo1ci88uk1htih9nd0nv6pd55buogn',
+              buttonEl: document.getElementById('pick'),
+              onSelect: function(file) {
+                console.log(file);
+                alert('Selected ' + file.title);
               }
-              </script>
-            
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="https://www.google.com/jsapi?key=AIzaSyBqsXnJ9krBKJgbHCnxc0iT4I60wEXNzOY"></script>
-            <script src="https://apis.google.com/js/client.js?onload=initPicker"></script>
-            <script src="{% static 'scripts/nav.js' %}"></script>
-            <script src="{% static 'scripts/filepicker.js' %}"></script>
-          </footer>
+            });	
+          }
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://www.google.com/jsapi?key=AIzaSyBqsXnJ9krBKJgbHCnxc0iT4I60wEXNzOY"></script>
+        <script src="https://apis.google.com/js/client.js?onload=initPicker"></script>
+        <script src="{% static 'scripts/nav.js' %}"></script>
+        <script src="{% static 'scripts/filepicker.js' %}"></script>
+      </footer>
     <!-- <button type="button" id="auth" disabled>Authenticate</button>
     <div id="result"></div>
     <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=loadPicker"></script> -->
