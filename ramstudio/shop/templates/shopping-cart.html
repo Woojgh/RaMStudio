@@ -3,6 +3,13 @@
 
 {% block body %}
     <section id="shopping-cart">
-        <img src="https://scontent.fsnc1-1.fna.fbcdn.net/v/t31.0-8/28161972_1569735289812039_6363273660801754435_o.jpg?oh=041a08759ad9880eb8a2220f53197de6&oe=5B17085C" />
+        <!-- <img src="https://scontent.fsnc1-1.fna.fbcdn.net/v/t31.0-8/28161972_1569735289812039_6363273660801754435_o.jpg?oh=041a08759ad9880eb8a2220f53197de6&oe=5B17085C" /> -->
+        {% for cart in object_list %}
+            <li class="cart"> 
+                <h3>{{ cart.title }}</h3>
+            </li>
+        {% empty %}
+            <li>No items yet.</li>
+        {% endfor %}
     </section>
 {% endblock %}

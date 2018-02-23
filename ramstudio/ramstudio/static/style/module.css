@@ -184,29 +184,21 @@ nav ul{
     list-style: none;
 }
 #back-to-grounds-map-button {
-    background-color: #444;
-    border-radius: 7px;
-    height: 8%;
-    left: 15%;
-    position: fixed;
-    top: 9%;
-    width: 10%;
+    left: 85%;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: 4%;
 }
-#back-to-grounds-map-button a {
-    position: fixed;
-    height: 9%;
-    padding: 3%;
-    width: 16%;
-    top: 2.85%;
-    z-index: 3;
-}
-#back-to-grounds-map-button p {
+#map-button-p2 {
     color: #999;
     font-size: 4em;
-    left: 15.2%;
-    position: absolute;
-    top: -71.5%;
-    z-index: 2;
+    margin: auto;
+}
+#map-button-p1 {
+    font-size: 1.4em;
+    margin: auto;
+    color: #999;
 }
 #contact-form {
     background-color: #444;
