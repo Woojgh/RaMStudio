@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block body %}
+<section id="shop-list">
+    <ul>
+        {% for item in shop-items %}
+            <li id="shop-item">
+                <p>Title: {{ item.title }}</p>
+                <a href="{{ item.image.url }}"><img src="{{ item.image.url }}" /></a>
+                <p>Description: {{ item.description }}</p>
+                {% for tag in item.tags.all %}
+                    <p>For Sale: {{ item.for_sale }}</p>
+                    <p>{{ tag.name }}</p>
+                {% endfor %}
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+<section id="page-numbers">
+    {% if shop_pages.has_previous %}
+        <a class="page-turn-left" href="?page={{ shop_pages.previous_page_number }}"><</a>
+        {% endif %}
+    {% if shop_pages.has_next %}
+        <a class="page-turn-right" href="?page={{ shop_pages.next_page_number }}">></a>
+    {% endif %}
+        <span class="current">
+            {{ shop_pages.number }} of {{ shop_pages.paginator.num_pages }}.
+        </span>
+</section>
+{% endblock	 %}

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'registration',
     'grounds',
     'contact',
+    'shop',
     'whitenoise',
 ]
 

@@ -440,6 +440,14 @@ nav ul{
     text-align: center;
     width: 65%;
 }
+#shop-list {
+    background-color: #333;
+    width: 72%;
+    height: 70%;
+    position: absolute;
+    top: 16%;
+    left: 19%;
+}
 #title {
     background-color: #444;
     border-radius: 10px;
