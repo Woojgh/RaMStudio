@@ -6,6 +6,7 @@ from django.utils import timezone
 from sorl.thumbnail import ImageField
 
 
+
 class Photo(models.Model):
     """Photo uploaded for sale item."""
 
@@ -30,6 +31,16 @@ class Item(models.Model):
     def __str__(self):
         """The string from of the project."""
         return self.title
+
+
+class Cart(models.Model):
+    """Cart item."""
+    items = models.ManyToManyField(Item, related_name='+')
+    title = models.CharField(max_length=180, blank=True, default='Untitled')
+
+    def __str__(self):
+        """The string from of the cart."""
+        return self.items
 
 
 class ItemForm(ModelForm):

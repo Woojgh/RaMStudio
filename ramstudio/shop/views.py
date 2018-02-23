@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from shop.models import Item, Photo, ItemForm
+from shop.models import Cart, Item, Photo, ItemForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.views.generic import ListView,CreateView, DetailView
@@ -16,6 +16,18 @@ class ShopView(ListView):
 
     def get_context_data(self):
         context = super(ShopView, self).get_context_data()
+        return context
+
+
+class ShoppingCart(ListView):
+    """Render all cart-items."""
+
+    context_object_name = 'cart-items'
+    template_name = 'shopping-cart.html'
+    queryset = Cart.objects.all()
+
+    def get_context_data(self):
+        context = super(ShoppingCart, self).get_context_data()
         return context
 
 

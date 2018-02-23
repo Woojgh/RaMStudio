@@ -521,6 +521,19 @@ nav ul{
     width: 74vw;
     top:20%;
 }
+#shopping-cart {
+    background-color: #444;
+    border-radius: 10px;
+    color: #999;
+    left: 20%;
+    position: absolute;
+    top: 23%;
+    width: 62%;
+}
+#shopping-cart img {
+    padding: 3%;
+    width: 95%;
+}
 #shopping-cart-icon {
     left: 139%;
     position: absolute;

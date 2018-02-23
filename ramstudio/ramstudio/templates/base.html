@@ -36,7 +36,11 @@
                 <li><a href="/grounds/deck">Back Deck</a></li>
                 <li><a href="/grounds/hasta">Hasta Bend</a></li>
               </ul></li>
-            <li><a href="/shop">Shop</a></li>
+            <li><a href="/shop">Shop</a>
+              <ul class="access-submenu">
+                <li><a href="/shop/cart/">Cart</a></li>
+              </ul>
+            </li>
             <li><a href="/projects">Projects</a>
               <ul class="access-submenu">
                 <!-- <li><a href="#">Current</a></li>
@@ -52,7 +56,7 @@
             {% block nav %}
             {% endblock %}
           </ul>
-          <a href="/cart"><img id="shopping-cart-icon" src="https://image.flaticon.com/icons/png/128/2/2772.png" /></a>
+          <a href="/shop/cart/"><img id="shopping-cart-icon" src="https://image.flaticon.com/icons/png/128/2/2772.png" /></a>
         </nav>
         <div id="title">
           <p>Ram &nbsp Studio</p>
