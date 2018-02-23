@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'ramstudio',
     'projects',
     'sorl.thumbnail',
-    'registration',
+    # 'registration',
     'grounds',
     'contact',
     'shop',

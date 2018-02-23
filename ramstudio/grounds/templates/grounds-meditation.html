@@ -11,10 +11,6 @@
 {% endblock %}
 {% block body %}
 <section id="grounds-meditation">
-    <div id="back-to-grounds-map-button">
-        <p>Map</p>
-        <a href="/grounds"></a>
-    </div>
     <div id="grounds-title">Meditation</div>
     <div id="grounds-thumbnails">
         <img onclick="changeImage('/media/images/raspberry-pi-logo.png')" class="grounds-thumb" src="http://via.placeholder.com/75x75" />
@@ -24,6 +20,7 @@
         <img onclick="changeImage('/media/images/raspberry-pi-logo.png')" class="grounds-thumb" src="http://via.placeholder.com/75x75" />
         <img onclick="changeImage('/media/images/raspberry-pi-logo.png')" class="grounds-thumb" src="http://via.placeholder.com/75x75" />
         <img onclick="changeImage('/media/images/raspberry-pi-logo.png')" class="grounds-thumb" src="http://via.placeholder.com/75x75" />
+        <a id="back-to-grounds-map-button" href="/grounds"><p>Map</p></a>
 
     </div>
     <div id="grounds-image-viewer">

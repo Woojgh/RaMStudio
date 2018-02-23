@@ -40,7 +40,7 @@ class Cart(models.Model):
 
     def __str__(self):
         """The string from of the cart."""
-        return self.items
+        return self.title
 
 
 class ItemForm(ModelForm):
@@ -51,3 +51,13 @@ class ItemForm(ModelForm):
 
         model = Item
         fields = ['title', 'description', 'photos', 'cover']
+
+
+class CartForm(ModelForm):
+    """Form for an cart."""
+
+    class Meta:
+        """Meta."""
+
+        model = Cart
+        fields = ['title', 'items']

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from shop.models import Photo, Item
+from shop.models import Photo, Item, Cart
 
 
-admin.site.register((Photo, Item))
+admin.site.register((Photo, Item, Cart))

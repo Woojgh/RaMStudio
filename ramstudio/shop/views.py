@@ -25,7 +25,7 @@ class ShoppingCart(ListView):
     context_object_name = 'cart-items'
     template_name = 'shopping-cart.html'
     queryset = Cart.objects.all()
-
+    
     def get_context_data(self):
         context = super(ShoppingCart, self).get_context_data()
         return context
