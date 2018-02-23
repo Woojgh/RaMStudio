@@ -30,3 +30,13 @@ class Item(models.Model):
     def __str__(self):
         """The string from of the project."""
         return self.title
+
+
+class ItemForm(ModelForm):
+    """Form for an Shop-item."""
+
+    class Meta:
+        """Meta."""
+
+        model = Item
+        fields = ['title', 'description', 'photos', 'cover']

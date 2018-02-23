@@ -1,10 +1,5 @@
 from django.contrib import admin
-from .models import Project
+from projects.models import Photo, Project
 
 
-class ProjectAdmin(admin.ModelAdmin):
-    """."""
-    list_display = ('title', 'id')
-
-
-admin.site.register(Project, ProjectAdmin)
+admin.site.register((Photo, Project))

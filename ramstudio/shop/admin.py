@@ -1,10 +1,5 @@
 from django.contrib import admin
+from shop.models import Photo, Item
 
-from .models import Item
 
-
-class ItemAdmin(admin.ModelAdmin):
-    """."""
-    list_display = ('title', 'id')
-
-admin.site.register(Item, ItemAdmin)
+admin.site.register((Photo, Item))

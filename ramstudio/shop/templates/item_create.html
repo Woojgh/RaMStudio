@@ -1,0 +1,16 @@
+{% block body %}
+<!-- <button type="button" id="pick">Pick File</button> -->
+<section id="item-create-form">
+        <h1>Create New Item</h1>
+        <hr />
+        <form  method="post">
+            {% csrf_token %}
+            <div>
+                {{ form.as_p }}
+            </div>
+            <div>
+                <button type="submit">Create</button>
+            </div>
+        </form>
+    </section>
+  {% endblock %}

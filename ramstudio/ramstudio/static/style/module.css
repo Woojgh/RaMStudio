@@ -3,7 +3,7 @@
 nav {
     border-radius: 10px;
     font-size: 1.6vw;
-    left: 33%;
+    left: 21%;
     position: fixed;
     width: fit-content;
     z-index: 2;
@@ -83,11 +83,15 @@ nav ul{
     width: 33.09%;
 }
 .grounds-thumb {
-
+    
 }
 .is-show{
     left: auto;
 	top: 100%;
+}
+.item-image {
+    height:17vw;
+    width: 17vw;
 }
 .project-item {
     background-color: #444;
@@ -111,6 +115,18 @@ nav ul{
     width: 74vw;
     top:20%;
 }
+.shop-item {
+    background-color: #444;
+    border-radius: 10px;
+    color: #999;
+    display: inline-block;
+    list-style: none;
+    margin: auto;
+    padding: 1%;
+    text-align: center;
+    width: 28%;
+}
+
 
 
 /* #### IDs #### */
@@ -379,6 +395,64 @@ nav ul{
     top: 35%;
 
 }
+#item-back-arrow {
+    color: #999;
+    left: 76%;
+    position: fixed;
+    text-decoration: none;
+    top: 65%;
+}
+#item-back-arrow img {
+    width:16%;
+}
+#item-back-arrow p {
+    display: inline;
+}
+#item-create-form {
+    position: absolute;
+    text-align: center;
+    color: #999;
+    background-color: #444;
+    border-radius: 10px;
+    top: 15%;
+    left: 23%;
+    padding: 9%;
+}
+#item-detail {
+    background-color: #444;
+    border-radius: 10px;
+    color:#999;
+    position: absolute;
+    left: 14%;
+    top: 65%;
+    width: 71%;
+}
+#item-detail-highlighted-image {
+    background-color: #444;
+    border-radius: 10px;
+    left: 21%;
+    position: absolute;
+    top: 13%;
+    padding: .6%;
+    width: 55%;
+    text-align: center;
+}
+#item-detail-highlighted-image img {
+    height:32em;
+    width: 89%;
+}
+#item-detail div {
+    padding:1%;
+}
+#item-detail h1 {
+    font-size: 40px;
+    padding-left: 32%;
+}
+#item-detail ul {
+    list-style-type: none;
+    text-align: center;
+    width: 65%;
+}
 #project-back-arrow {
     color: #999;
     left: 76%;
@@ -441,12 +515,11 @@ nav ul{
     width: 65%;
 }
 #shop-list {
-    background-color: #333;
-    width: 72%;
-    height: 70%;
+    height: 100%;
+    left: 13vw;
     position: absolute;
-    top: 16%;
-    left: 19%;
+    width: 74vw;
+    top:20%;
 }
 #title {
     background-color: #444;

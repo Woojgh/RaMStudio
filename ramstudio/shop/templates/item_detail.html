@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+<!-- {% block scripts %}
+<script type="text/javascript">
+    function showImage(imgName) {
+        var curLink = document.getElementById('current-link');
+        var curImage = document.getElementById('project-selected-image');
+        var theSource = imgName;
+        curLink.href = imgName;
+        curImage.src = theSource;
+        curImage.alt = imgName;
+        curImage.title = imgName;
+    }
+</script> -->
+{% endblock %}
+{% block body %}
+<section id="item-detail">
+    <div>
+        {% for photo in item.photos.all %}
+            <item id="item-photo" >
+                {% thumbnail photo.image "75x75" crop="center" as im %}
+                <img src="{{ im.url }}" alt="{{ im.url }}" title="{{ photo.id }}" onclick="showImage('{{ photo.image.url }}');">
+                {% endthumbnail %}
+            </item>
+        {% endfor %}
+    </div>
+    <h1>{{ item.title }}</h1>
+    <ul>
+        {% if item.description %}
+        <li> {{ item.description }}</li>
+        {% endif %}
+    </ul>
+    <a id="item-back-arrow" href="/shop"><p>Back to items</p><img src="https://i.stack.imgur.com/B2j6l.png" /></a>
+    <p id="item-date">Date uploaded: {{ item.date_uploaded }}</p>
+</section>
+<section id="item-detail-highlighted-image">
+    <a id="current-link" href="{{ item.cover.image.url }}"><img id="item-selected-image" src="{{ item.cover.image.url }}" /></a>
+</section>
+{% endblock %}
