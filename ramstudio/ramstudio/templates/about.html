@@ -29,13 +29,12 @@ pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offi
             </li>
         </ul>
     </div>
-    <p>Contact Us</p>
-    <div id="about-contact">
-        <form role="form" action="" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+</section>
+<section id="about-contact-form">
+    <form role="form" action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
 </section>
 {% endblock %}
