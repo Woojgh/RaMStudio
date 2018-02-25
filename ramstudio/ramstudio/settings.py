@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'grounds',
     'contact',
     'shop',
-    'whitenoise',
+    # 'whitenoise',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ACCOUNT_ACTIVATION_DAYS = 7
