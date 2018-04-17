@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'ramstudio',
     'projects',
     'sorl.thumbnail',
-    # 'registration',
+    'registration',
     'grounds',
     'contact',
     'shop',
@@ -136,8 +136,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-
-# Static files (CSS, JavaScript, Images)
+# Static files (CSS, JavaScript, Images).
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 if DEBUG:
