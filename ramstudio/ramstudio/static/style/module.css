@@ -204,16 +204,6 @@ nav ul{
     text-decoration: none;
     top: 4%;
 }
-#map-button-p2 {
-    color: #999;
-    font-size: 4em;
-    margin: auto;
-}
-#map-button-p1 {
-    font-size: 1.4em;
-    margin: auto;
-    color: #999;
-}
 #contact-form {
     background-color: #444;
     border-radius: 10px;
@@ -400,7 +390,7 @@ nav ul{
     left: 31%;
     position: absolute;
     top: 35%;
-
+    
 }
 #item-back-arrow {
     color: #999;
@@ -459,6 +449,16 @@ nav ul{
     text-align: center;
     width: 65%;
 }
+#map-button-p2 {
+    color: #999;
+    font-size: 4em;
+    margin: auto;
+}
+#map-button-p1 {
+    font-size: 1.4em;
+    margin: auto;
+    color: #999;
+}
 #project-back-arrow {
     color: #999;
     left: 76%;
@@ -505,7 +505,6 @@ nav ul{
     text-align: center;
 }
 #project-detail-highlighted-image img {
-    height:32em;
     width: 89%;
 }
 #project-detail div {
