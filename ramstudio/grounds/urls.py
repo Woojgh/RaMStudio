@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.GroundsView, name='grounds'),
+    # path('add_photo', views.GroundsPhotoView, name='grounds-photo'),
     path('deck/', views.GroundsDeckView, name='grounds-deck'),
     path('firepit/', views.GroundsFirepitView, name='grounds-firepit'),
     path('front/', views.GroundsFrontView, name='grounds-front'),

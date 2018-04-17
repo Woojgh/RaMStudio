@@ -6,7 +6,7 @@ from contact.forms import ContactForm
 
 def Home(request):
     return render(request, 'home.html')
-
+    
 
 def About(request):
     if request.method == 'GET':
